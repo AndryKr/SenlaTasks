@@ -31,9 +31,9 @@ public class PrimeFactors {
     public void generatePrimeFactors(int value, int n) {
         if (n > value) return;
         if (value % n == 0) {
-            System.out.println(n);
             while (value % n == 0) {
                 value = value / n;
+                System.out.println(n);
             }
         }
         generatePrimeFactors(value, n + 1);
