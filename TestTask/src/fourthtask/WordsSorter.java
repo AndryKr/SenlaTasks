@@ -65,7 +65,6 @@ public class WordsSorter {
     public void sortWordsByAmountVowelLetters(String text) {
         text = text.replaceAll("[^а-яА-Я]", " ");
         String[] wordsArray = text.split("\\s+");
-
         Arrays.stream(wordsArray)
                 .sorted((s1, s2) -> Integer.compare(getAmountVowelLetters(s2), getAmountVowelLetters(s1)))
                 .forEach(word -> System.out.println(firstVowelLettersUpperCase(word)));
