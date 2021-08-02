@@ -22,6 +22,7 @@ public class PrimeFactors {
         System.out.println("Введите целое число");
         try {
             value = scanner.nextInt();
+            scanner.nextLine();
         } catch (NoSuchElementException e) {
             System.out.println("Введено не целое число: " + e);
         }

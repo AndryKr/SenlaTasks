@@ -6,7 +6,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WordsSorter {
-
     private static WordsSorter wordsSorter;
 
     private WordsSorter() {
