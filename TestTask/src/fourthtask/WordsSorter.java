@@ -1,7 +1,5 @@
 package fourthtask;
 
-import thirdtask.PrimeFactors;
-
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -9,7 +7,6 @@ import java.util.regex.Pattern;
 
 public class WordsSorter {
 
-    private String str = null;
     private static WordsSorter wordsSorter;
 
     private WordsSorter() {
@@ -24,6 +21,7 @@ public class WordsSorter {
 
     public String scanEnteredString(Scanner scanner) {
         System.out.println("Введите предложение кирилицей");
+        String str = null;
         try {
             str = scanner.nextLine();
         } catch (Exception e) {
@@ -72,5 +70,4 @@ public class WordsSorter {
                 .sorted((s1, s2) -> Integer.compare(getAmountVowelLetters(s2), getAmountVowelLetters(s1)))
                 .forEach(word -> System.out.println(firstVowelLettersUpperCase(word)));
     }
-
 }

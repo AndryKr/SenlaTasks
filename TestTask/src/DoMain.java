@@ -19,26 +19,33 @@ public class DoMain {
         SafeBoxOptimization safeBoxOptimization = SafeBoxOptimization.getInstance();
 
         try (Scanner scanner = new Scanner(System.in)) {
-            //Решение задания №1
+
+            System.out.println("Решение задания №1");
             System.out.println(sumOfDigits.getSumOfDigits(sumOfDigits.scanEnteredString(scanner)));
             System.out.println('\n');
-            //Решение задания №2
-            Vector firstVector =  new Vector(3,5, 8, 9);
-            Vector secondVector = new Vector(2, 6, 14, 11);
+
+            System.out.println("Решение задания №2");
+            //В этой задаче добавил координату векторов по оси z осознанно - для расчёта векторного произведения
+            Vector firstVector =  new Vector(3,5, 8, 9, 12, 14);
+            Vector secondVector = new Vector(2, 6, 14, 11, 10, 17);
 
             vectorСalculator.setVectors(firstVector, secondVector);
             vectorСalculator.getResult();
             System.out.println('\n');
-            //Решение задания №3
+
+            System.out.println("Решение задания №3");
             primeFactors.generatePrimeFactors(primeFactors.scanEnteredString(scanner), 2);
             System.out.println('\n');
-            //Решение задания №4
+
+            System.out.println("Решение задания №4");
             wordsSorter.sortWordsByAmountVowelLetters(wordsSorter.scanEnteredString(scanner));
             System.out.println('\n');
-            //Решение задания №5
+
+            System.out.println("Решение задания №5");
             artDigits.draw(scanner);
             System.out.println('\n');
-            //Решение задания №6
+
+            System.out.println("Решение задания №6");
             safeBoxOptimization.start();
         }
     }
