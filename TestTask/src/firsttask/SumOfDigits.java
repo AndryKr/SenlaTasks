@@ -20,7 +20,13 @@ public class SumOfDigits {
 
     public String scanEnteredString(Scanner scanner) {
         System.out.println("Введите строку");
-            return scanner.nextLine();
+        String str = null;
+        try {
+            str = scanner.nextLine();
+        } catch (Exception e) {
+            System.out.println("Ошибка: введены неверные данные!");
+        }
+        return str;
     }
 
     public int getSumOfDigits(String string) {

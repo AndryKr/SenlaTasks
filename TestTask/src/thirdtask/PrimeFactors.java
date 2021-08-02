@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PrimeFactors {
 
-    private volatile int value;
+    private int value;
     private static PrimeFactors primeFactors;
 
     private PrimeFactors() {

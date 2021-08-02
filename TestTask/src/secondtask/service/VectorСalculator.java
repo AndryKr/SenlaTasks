@@ -6,22 +6,24 @@ import static java.lang.Math.*;
 
 public class VectorСalculator {
 
-    public Vector[] getVectors() {
+    private static VectorСalculator vectorСalculator;
 
-        String format = "начало (x1,y1), конец (x2,y2)";
+    private VectorСalculator() {
+    }
 
-        System.out.println("Введите данные первого вектора в формате x1,y1,x2,y2");
-
-        Vector[] vectors = {new Vector(0, 0, 0,0), new Vector(0,0,0,0)};
-        return vectors;
+    public static VectorСalculator getInstance() {
+        if (vectorСalculator == null) {
+            vectorСalculator = new VectorСalculator();
+        }
+        return vectorСalculator;
     }
 
     public double getLength(Vector vector) {
 
-        return sqrt(pow(vector.getFinalX()-vector.getInitialX(), 2) + pow(vector.getFinalY()-vector.getInitialY(), 2));
+        return sqrt(pow(vector.getFinalX() - vector.getInitialX(), 2) + pow(vector.getFinalY() - vector.getInitialY(), 2));
     }
 
-    public Vector getMultiplicationVector (Vector firstVector, Vector secondVector) {
+    public Vector getMultiplicationVector(Vector firstVector, Vector secondVector) {
         return null;
     }
 }
