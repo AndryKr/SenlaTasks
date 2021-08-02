@@ -26,11 +26,8 @@ public class DoMain {
             Vector firstVector =  new Vector(3,5, 8, 9);
             Vector secondVector = new Vector(2, 6, 14, 11);
 
-            System.out.println(vectorСalculator.getLength(firstVector));
-            System.out.println(vectorСalculator.getLength(secondVector));
-
-            vectorСalculator.getMultiplicationVector(firstVector, secondVector);
-            vectorСalculator.getMultiplicationVector(secondVector, firstVector);
+            vectorСalculator.setVectors(firstVector, secondVector);
+            vectorСalculator.getResult();
             System.out.println('\n');
             //Решение задания №3
             primeFactors.generatePrimeFactors(primeFactors.scanEnteredString(scanner), 2);
